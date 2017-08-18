@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jyz-Ek-Q4a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jyz-Ek-Q4a">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -343,7 +343,7 @@
         <!--追加画面-->
         <scene sceneID="6Az-SI-PgM">
             <objects>
-                <viewController id="UIA-mX-Gc2" sceneMemberID="viewController">
+                <viewController id="UIA-mX-Gc2" customClass="AddHouseholdAccountViewController" customModule="HouseholdAccounts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PQX-nQ-dPu"/>
                         <viewControllerLayoutGuide type="bottom" id="qoc-KZ-e9x"/>
@@ -366,6 +366,9 @@
                                 <state key="normal" title="追加">
                                     <color key="titleColor" red="0.23091402202072542" green="0.19340064834394646" blue="0.1702315378019508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="commit:" destination="UIA-mX-Gc2" eventType="touchUpInside" id="r1o-9G-ycA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AM-KF-OCC">
                                 <rect key="frame" x="16" y="98" width="105" height="21"/>
@@ -409,11 +412,18 @@
                                 <state key="normal" title="キャンセル">
                                     <color key="titleColor" red="0.230914022" green="0.19340064830000001" blue="0.1702315378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancel:" destination="UIA-mX-Gc2" eventType="touchUpInside" id="pmC-4k-yAg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="追加画面" id="5YQ-9N-asV"/>
+                    <connections>
+                        <outlet property="memo" destination="oPL-mm-MBJ" id="XxM-su-T9I"/>
+                        <outlet property="money" destination="zDw-Up-l3S" id="NS2-cV-2ou"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JC-4V-lr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
